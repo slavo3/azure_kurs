@@ -1,0 +1,19 @@
+Custom role próbowałem dodać z poziomu azure portal - ale nie znalazłem takiej opacji w GUI, ale znalazłem opis:
+ You can create custom roles using Azure PowerShell, Azure CLI, or the REST API , co wiele wyjasnia:)
+
+{
+  "Name": "Virtual Machine Test Role",
+  "IsCustom": true,
+  "Description": "Can start/restart/support virtual machines.",
+  "Actions": [
+    "Microsoft.Compute/virtualMachines/start/action",
+    "Microsoft.Compute/virtualMachines/restart/action",
+    "Microsoft.Support/*"
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/{subscriptionId}"
+  ]
+}

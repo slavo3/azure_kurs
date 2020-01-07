@@ -1,0 +1,10 @@
+skrót sj=nazwa skrócona produktu
+
+Resource group: rg-sj-prod
+Virtual network: vnet-sj-westeu-prod
+Subnet: snet-sj-prod
+Network interface: nic-01-vmsj001prod-001
+VM: vmsj001prod (max 15 )
+Storage account data: stsjdata001
+SQL data: sqldb-sj-prod
+Load Balancer: lb-sj-prod-001
