@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "admin-test"
+    },
+    "adminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/<subscription_id>/resourceGroups/rg-sj/providers/Microsoft.KeyVault/vaults/sj-kv-test"
+        },
+        "secretName": "adminPassword"
+      }
+    }
+  }
+}
