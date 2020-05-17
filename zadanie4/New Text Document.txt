@@ -1,0 +1,43 @@
+1.)Zdiagnozowanie potrzeb migracji na chmure
+a. jakie problemy są ze środowiskiem on-prem (słaba dostępnośc, awarie, kosty utrzymania etc)
+b. jakie problemy rozwiązujemy (skalowalność, dostępność, odpowiedni poziom bezp, zmiana modelu pracy pracowników poprzez dostep do usług z kazdego miejsca)
+c. jakie nowe problemy dochodzą
+2.)Audyt prawny biznesu firmy - czy i jakie są skutki prawne (zarówno dla firmy jak i klientów) przejścia na śroodowisko chmurowe
+a. audyt danych
+b. audyt bezpieczeństwa
+c. audyt RODO
+3.) Kompetencje pracowników
+a. jakie są, jakich brakuje - opracowanie planu pozyskania wiedzy/może nowych pracowników/uzbrajanie ludzi w wiedzy o chmurowych rozw
+b. zadbanie o to aby pracownikom chciało się rozszerzyć wiedzę o chmurowych rozwiązaniach
+4.) Zebranie wiedzy o systemachw firmie versus wykorzystywane maszyny, poznanie topologi architektury sieciowej w celu poznania oceny złozoności
+5.)Zebranie wiedzy na temat fizycznych serwerów i ich parametrów w celu próby oszacowania wstępnych ogólnych kosztów bez wchodzenia w szczegóły (o ile się to da zrobić na wysokim poziomie ogólnosci)
+a.)rozbicie kosztów na jakieś sensowne grupy, np przeniesienie danych do chmury, 
+6.) Decyzje związane z AD - jaki model przyjmujemy. Czy migracja do chmury? Czy ADFS etc,  czy inne rozwiazania
+7.) Opracowanie ktore dane chcemy trzymać w on-prem a które migrujemy do chmury - najlepiej z podziałem na systemy
+6.) Wyselekcjonowanie systemów nadających się do pracy w chmurze które mają GO po audytach (bo zapewne nie wszystko bedzie migrowane). Kryteria wg któych ustalałym to czy przenosimy system mogą być rożne. Ja zaproponowałbym dwa podejścia
+ -im mniej ważne system tym lepiej. Kroki do selekcji:
+a.)ocena wartości/ważności systemu dla firmy (im niższy tym lepiej :) ) - z racji ryzyka poprawności uruchomienia i odtworzenia stanu AS IS.
+b.)ocena danych na których operuje system (dane poufne, dane klientów) - im mniej znaczące dane tym lepiej pod kątem pierwszych kandydatów do migracji.
+c.) ocena obciążenia serwerów  - jeśli system w dużym stopniu obciąża maszynę trzeba się zastanowić nad tym czy na pewno chcemy go migrować - kwestia kosztów może być nie do zaakceptowania
+d.) kwestie technologi uzywanych przez system - może niektóre są na tyle stare że będą blockerami do migracji
+e.) ustalenie HA takiego systemu - chumra zapewnia duże wsparcie w tym temacie
+
+ -systemy których przeniesienie da największą korzyść dla firmy
+a.) selekcja systemów z obciązeniem charakteryzującym się wysokimi okresowymi pickami
+
+
+a. okreslenie SLA per każdy taki system
+b. opracowanie potrzeb związanych z backupami - odtworzenie istniejącego modelu bądź utworzenie nowego
+c. okreslenie jak chcmey monitorować systemy - jakich usłu chcemy do tego używać
+7.) Wypracowanie wstępnego timeline rolloutu wybranyh systemów do chmury (w podejściu które jest zaproponowane w opisie lift and ship)
+
+8.)Faza labs (experymentów)
+a.POCe - migracje testowe
+b.Testy
+8.)Nomenklatura nazewnicza tworzonych zasobów w chmurze - opracowanie
+9.)RBAG - utworzenie modeulu uprawnień - co kto może zmieniać
+10.
+
+koszty
+monitoring
+ocena co moze wejsc w PASS i SASS
